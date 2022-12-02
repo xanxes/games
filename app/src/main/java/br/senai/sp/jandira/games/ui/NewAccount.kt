@@ -1,10 +1,8 @@
-package br.senai.sp.jandira.games
+package br.senai.sp.jandira.games.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.Toast
+import br.senai.sp.jandira.games.R
 
 class NewAccount : AppCompatActivity() {
 

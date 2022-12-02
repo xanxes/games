@@ -15,10 +15,10 @@ interface GameDao {
     @Update
     fun update(game: Game): Int
 
-    @Query("SELECT * FROM tbl_game ORDER BY titulo ASC")
+    @Query("SELECT * FROM tbl_game ORDER BY game_name ASC")
     fun getAll(): List<Game>
 
-    @Query("SELECT * FROM tbl_game WHERE id = :id")
+    @Query("SELECT * FROM tbl_game WHERE code = :id")
     fun getContactById(id: Int): Game
 
 }

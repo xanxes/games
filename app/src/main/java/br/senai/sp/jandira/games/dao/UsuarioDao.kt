@@ -15,10 +15,10 @@ interface UsuarioDao {
     @Update
     fun update(usuario: Usuario): Int
 
-    @Query("SELECT * FROM tbl_usuario ORDER BY nome ASC")
+    @Query("SELECT * FROM tbl_usuario ORDER BY user_name ASC")
     fun getAll(): List<Usuario>
 
-    @Query("SELECT * FROM tbl_usuario WHERE id = :id")
+    @Query("SELECT * FROM tbl_usuario WHERE codeConsole = :id")
     fun getContactById(id: Int): Usuario
 
 }

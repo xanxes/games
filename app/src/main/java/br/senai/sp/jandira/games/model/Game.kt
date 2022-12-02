@@ -8,15 +8,24 @@ import java.time.LocalDate
 
 @Entity(tableName = "tbl_game")
 class Game {
+
     @PrimaryKey(autoGenerate = true)
-    var id = 0
-    var foto: Bitmap? = null
-    var titulo = ""
-    var descricao = ""
-    var estudio = ""
+    var code = 0
 
-    @ColumnInfo(name = "ano_lancamento")
-    var anoLancamento = 0
+    @ColumnInfo(name = "game_name")
+    var gameName = ""
 
-    var finalizado:Boolean = false
+    @ColumnInfo(name = "game_developer")
+    var gameDeveloper = ""
+
+    @ColumnInfo(name = "game_description")
+    var gameDescription = ""
+
+    @ColumnInfo(name = "game_release_date")
+    var gameReleaseDate = ""
+
+    @ColumnInfo(name = "game_status")
+    var gameStatus = ""
+
+    var userId = 0
 }

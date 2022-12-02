@@ -1,27 +1,28 @@
 package br.senai.sp.jandira.games.repository
 
 import android.content.Context
+import br.senai.sp.jandira.games.model.Usuario
 
 class UsuarioRepository(context: Context) {
 
-        private val db = ContactDb.getDataBase(context).contactDao()
+    private val db = GamesDb.getDataBase(context).usuarioDao()
 
-        fun save(contact: Contact): Long {
-            return db.save(contact)
-        }
-
-        fun update(contact: Contact): Int {
-            return db.update(contact)
-        }
-
-        fun delete(contact: Contact): Int {
-            return db.delete(contact)
-        }
-        fun getAll(): List<Contact>{
-            return  db.getAll()
-        }
-        fun getContactById(id: Int): Contact {
-            return db.getContactById(id)
-        }
-
+    fun save(usuario: Usuario): Long {
+        return db.save(usuario)
     }
+
+    fun delete(usuario: Usuario): Int {
+        return db.delete(usuario)
+    }
+
+    fun update(usuario: Usuario): Int {
+        return db.update(usuario)
+    }
+
+    fun getAll(): List<Usuario> {
+        return db.getAll()
+    }
+
+
+
+}

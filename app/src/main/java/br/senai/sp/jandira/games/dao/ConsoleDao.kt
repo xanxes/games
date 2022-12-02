@@ -15,10 +15,10 @@ interface ConsoleDao {
     @Update
     fun update(console: Console): Int
 
-    @Query("SELECT * FROM tbl_console ORDER BY nome ASC")
+    @Query("SELECT * FROM tbl_console ORDER BY console_name ASC")
     fun getAll(): List<Console>
 
-    @Query("SELECT * FROM tbl_console WHERE id = :id")
+    @Query("SELECT * FROM tbl_console WHERE codeConsole = :id")
     fun getContactById(id: Int): Console
 
 }

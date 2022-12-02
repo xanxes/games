@@ -7,13 +7,18 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "tbl_console")
 class Console {
-            @PrimaryKey(autoGenerate = true)
-            var id = 0
-            var nome = ""
-            var fabricante = ""
-            var descricao = ""
-            var foto: Bitmap? = null
+    @PrimaryKey(autoGenerate = true)
+    var codeConsole = 0
 
-            @ColumnInfo(name = "ano_lancamento")
-            var anoLancamento = 0
+    @ColumnInfo(name = "console_name")
+    var consoleName = ""
+
+    @ColumnInfo(name = "console_producer")
+    var consoleProducer = ""
+
+    @ColumnInfo(name = "console_description")
+    var consoleDescription = ""
+
+    @ColumnInfo(name = "console_release_date")
+    var consoleReleaseDate = 0
 }
